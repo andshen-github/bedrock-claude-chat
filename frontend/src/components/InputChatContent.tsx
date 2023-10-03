@@ -46,7 +46,7 @@ const InputChatContent: React.FC<Props> = (props) => {
     >
       <Textarea
         className="scrollbar-thumb-gray-200 scrollbar-thin m-2 -mr-14 bg-transparent pr-14 "
-        placeholder={props.placeholder ?? "入力してください"}
+        placeholder={props.placeholder ?? "請輸入訊息"}
         noBorder
         value={props.content}
         onChange={props.onChangeContent}
