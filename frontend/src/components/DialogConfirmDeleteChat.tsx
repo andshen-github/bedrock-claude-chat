@@ -13,7 +13,7 @@ type Props = BaseProps & {
 
 const DialogConfirmDeleteChat: React.FC<Props> = (props) => {
   return (
-    <ModalDialog {...props} title="削除確認">
+    <ModalDialog {...props} title="刪除確認">
       <div>
         チャット
         <span className="font-bold">「{props.target?.title}」</span>
