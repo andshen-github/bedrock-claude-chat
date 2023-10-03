@@ -68,14 +68,14 @@ const ChatPage: React.FC = () => {
           <div className="mb-12 mt-2 flex flex-col items-center">
             <div className="flex items-center font-bold text-red-500">
               <PiWarningCircleFill className="mr-1 text-2xl" />
-              回答中にエラーが発生しました。
+              回答時發生錯誤。
             </div>
 
             <Button
               className="mt-2 border-gray-400 bg-white shadow "
               icon={<PiArrowsCounterClockwise />}
               onClick={retryPostChat}>
-              再実行
+              重新運行
             </Button>
           </div>
         )}
