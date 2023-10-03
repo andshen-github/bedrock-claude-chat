@@ -291,7 +291,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
               className="h-full w-full bg-aws-squid-ink"
               onClick={onClickNewChat}
               icon={<PiPlus />}>
-              新規チャット
+              新聊天
             </Button>
           </div>
 
@@ -318,7 +318,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
               text
               icon={<PiSignOut />}
               onClick={props.onSignOut}>
-              サインアウト
+              登出
             </Button>
           </div>
         </nav>
