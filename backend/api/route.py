@@ -24,13 +24,13 @@ router = APIRouter()
 
 @router.get("/health")
 def health():
-    """ヘルスチェック用"""
+    """用於健康檢查"""
     return {"status": "ok"}
 
 
 @router.post("/conversation", response_model=ChatOutput)
 def post_message(request: Request, chat_input: ChatInput):
-    """チャットメッセージを送信する"""
+    """發送聊天訊息"""
     current_user: User = request.state.current_user
 
     output = chat(user_id=current_user.id, chat_input=chat_input)
@@ -39,7 +39,7 @@ def post_message(request: Request, chat_input: ChatInput):
 
 @router.get("/conversation/{conversation_id}", response_model=Conversation)
 def get_conversation(request: Request, conversation_id: str):
-    """一連の会話履歴を取得する"""
+    """取得一組對話歷史記錄"""
     current_user: User = request.state.current_user
 
     conversation = find_conversation_by_id(current_user.id, conversation_id)
@@ -65,7 +65,7 @@ def get_conversation(request: Request, conversation_id: str):
 
 @router.delete("/conversation/{conversation_id}")
 def delete_conversation(request: Request, conversation_id: str):
-    """会話履歴を削除する"""
+    """刪除對話記錄"""
     current_user: User = request.state.current_user
 
     delete_conversation_by_id(current_user.id, conversation_id)
@@ -75,7 +75,7 @@ def delete_conversation(request: Request, conversation_id: str):
 def get_all_conversations(
     request: Request,
 ):
-    """すべての会話履歴のメタ情報を取得する"""
+    """獲取所有對話歷史原始訊息"""
     current_user: User = request.state.current_user
 
     conversations = find_conversation_by_user_id(current_user.id)
@@ -94,7 +94,7 @@ def get_all_conversations(
 def delete_all_conversations(
     request: Request,
 ):
-    """すべての会話履歴を削除する"""
+    """刪除所有對話記錄"""
     delete_conversation_by_user_id(request.state.current_user.id)
 
 
@@ -102,7 +102,7 @@ def delete_all_conversations(
 def update_conversation_title(
     request: Request, conversation_id: str, new_title_input: NewTitleInput
 ):
-    """会話のタイトルを更新する"""
+    """更新對話標題"""
     current_user: User = request.state.current_user
 
     change_conversation_title(
@@ -114,7 +114,7 @@ def update_conversation_title(
     "/conversation/{conversation_id}/proposed-title", response_model=ProposedTitle
 )
 def get_proposed_title(request: Request, conversation_id: str):
-    """会話のタイトルを提案する"""
+    """建議對話標題"""
     current_user: User = request.state.current_user
 
     title = propose_conversation_title(current_user.id, conversation_id)
