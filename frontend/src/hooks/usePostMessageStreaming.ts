@@ -42,18 +42,18 @@ const usePostMessageStreaming = create<{
           } else {
             ws.close();
             console.error(data);
-            throw new Error('通常とは異なるResponseが返ってきました。');
+            throw new Error('返回了一個不尋常的響應。。');
           }
         } catch (e) {
           console.error(e);
-          reject('推論中にエラーが発生しました。');
+          reject('推理時發生錯誤。');
         }
       };
 
       ws.onerror = (e) => {
         ws.close();
         console.error(e);
-        reject('推論中にエラーが発生しました。');
+        reject('推理時發生錯誤。');
       };
       ws.onclose = () => {
         resolve(conversationId);
