@@ -15,9 +15,9 @@ const DialogConfirmDeleteChat: React.FC<Props> = (props) => {
   return (
     <ModalDialog {...props} title="刪除確認">
       <div>
-        チャット
+        聊天
         <span className="font-bold">「{props.target?.title}」</span>
-        を削除しますか？
+        您想刪除它嗎？
       </div>
 
       <div className="mt-4 flex justify-end gap-2">
@@ -33,7 +33,7 @@ const DialogConfirmDeleteChat: React.FC<Props> = (props) => {
           }}
           className="bg-red-500 text-aws-font-color-white p-2"
         >
-          削除
+          刪除
         </Button>
       </div>
     </ModalDialog>
