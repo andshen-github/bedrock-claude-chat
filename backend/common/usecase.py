@@ -105,7 +105,7 @@ def propose_conversation_title(
     user_id: str, conversation_id: str, model="claude"
 ) -> str:
     assert model == "claude", "Only claude model is supported for now."
-    PROMPT = """この会話に件名を一言でつけてください。出力は件名だけにしてください。その他の文字は一切出力しないでください。言語は推測してください（英語なら英語で出力）。"""
+    PROMPT = """請為本對話指定一個單字主題行。 請僅輸出主題行。 不輸出任何其他字元。 請猜測語言（如果是英語，則以英語輸出）。"""
 
     # Fetch existing conversation
     conversation = find_conversation_by_id(user_id, conversation_id)
