@@ -155,7 +155,7 @@ const useChat = () => {
   useEffect(() => {
     if (error?.response?.status === 404) {
       openSnackbar(
-        '指定のチャットは存在しないため、新規チャット画面を表示しました。'
+        '由於指定的聊天不存在，因此顯示了新的聊天畫面。'
       );
       navigate('');
       newChat();
