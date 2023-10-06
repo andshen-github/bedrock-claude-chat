@@ -95,8 +95,7 @@ async def add_log_requests(request: Request, call_next: ASGIApp):
     body = await request.body()
     logger.debug(f"Request body: {body}")
 
-    # Avoid application blocking
-    # See: https://github.com/tiangolo/fastapi/issues/394
+    
     async def receive() -> Message:
         return {"type": "http.request", "body": body}
 
