@@ -22,7 +22,7 @@ class TestStartChat(unittest.TestCase):
                 role="user",
                 content=Content(
                     content_type="text",
-                    body="あなたの名前は何ですか？",
+                    body="你叫什麼名字？",
                 ),
                 model=MODEL,
             ),
@@ -61,7 +61,7 @@ class TestContinueChat(unittest.TestCase):
                         role="user",
                         content=ContentModel(
                             content_type="text",
-                            body="あなたの名前は何ですか？",
+                            body="你叫什麼名字？",
                         ),
                         model=MODEL,
                         create_time=1627984879.9,
@@ -71,7 +71,7 @@ class TestContinueChat(unittest.TestCase):
                         role="assistant",
                         content=ContentModel(
                             content_type="text",
-                            body="私の名前はクロードです。",
+                            body="我的名字是克勞德。",
                         ),
                         model=MODEL,
                         create_time=1627984879.9,
@@ -88,7 +88,7 @@ class TestContinueChat(unittest.TestCase):
                 role="user",
                 content=Content(
                     content_type="text",
-                    body="あなたの友達を紹介してください。",
+                    body="推薦你的朋友。",
                 ),
                 model=MODEL,
             ),
@@ -116,8 +116,8 @@ class TestProposeTitle(unittest.TestCase):
                 role="user",
                 content=Content(
                     content_type="text",
-                    # body="日本の料理で有名なやつ",
-                    body="Famous japanese Dishes",
+                    # body="著名的台灣料理",
+                    body="Famous Taiwan Dishes",
                 ),
                 model=MODEL,
             ),
