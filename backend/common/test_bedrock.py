@@ -11,7 +11,7 @@ MODEL = "claude"
 
 class TestBedrock(unittest.TestCase):
     def test_invoke(self):
-        prompt = "日本のおすすめのアニメを教えて"
+        prompt = "請告訴我你推薦的動漫。"
         model = MODEL
 
         reply_txt = invoke(prompt, model)
@@ -24,7 +24,7 @@ class TestBedrock(unittest.TestCase):
                 role="user",
                 content=ContentModel(
                     content_type="text",
-                    body="こんにちは",
+                    body="你好",
                 ),
                 model=MODEL,
                 create_time=1627984879.9,
@@ -34,7 +34,7 @@ class TestBedrock(unittest.TestCase):
                 role="assistant",
                 content=ContentModel(
                     content_type="text",
-                    body="こんにちは！どうされましたか？",
+                    body="你好！ 發生了什麼事？？",
                 ),
                 model=MODEL,
                 create_time=1627984879.9,
@@ -44,7 +44,7 @@ class TestBedrock(unittest.TestCase):
                 role="user",
                 content=ContentModel(
                     content_type="text",
-                    body="AWSを学ぶ良い方法について教えて",
+                    body="AWS告訴我一個好的學習方法",
                 ),
                 model=MODEL,
                 create_time=1627984879.9,
