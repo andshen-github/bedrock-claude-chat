@@ -15,7 +15,6 @@ const ALLOWED_IP_V6_ADDRESS_RANGES: string[] = app.node.tryGetContext(
 );
 
 // WAF for frontend
-// 2023/9: Currently, the WAF for CloudFront needs to be created in the North America region (us-east-1), so the stacks are separated
 // https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html
 const waf = new FrontendWafStack(app, `FrontendWafStack`, {
   env: {
