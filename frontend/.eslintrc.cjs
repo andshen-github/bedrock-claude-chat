@@ -15,7 +15,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    // Prettire で実施するので ESLint の Rule は無効化
+    
     'tailwindcss/classnames-order': ['off'],
   },
 };
