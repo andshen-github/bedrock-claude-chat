@@ -34,7 +34,7 @@ const useChatState = create<{
     conversationId: '',
     setConversationId: (s) => {
       set((state) => {
-        // 会話IDが変わったらエラー状態を初期化
+        
         const hasError = state.conversationId !== s ? false : state.hasError;
 
         return {
