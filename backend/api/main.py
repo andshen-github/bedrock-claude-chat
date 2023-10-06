@@ -25,7 +25,6 @@ app = FastAPI()
 
 app.include_router(router)
 
-# NOTE: 組織のセキュリティポリシーに従い、適切にCORSを設定してください
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ALLOW_ORIGINS.split(","),
