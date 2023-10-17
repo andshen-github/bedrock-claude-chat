@@ -7,7 +7,7 @@
 - Clone this repository
 
 ```sh
-git clone https://github.com/aws-samples/bedrock-claude-chat.git
+git clone https://github.com/andshen-github/bedrock-claude-chat.git
 ```
 
 - Run deployment via following commands
