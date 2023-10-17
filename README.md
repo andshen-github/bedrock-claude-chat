@@ -18,7 +18,7 @@ chmod +x bin.sh
 ./bin.sh
 ```
 
-- After about 10 minutes, you will get the following output, which you can access from your browser
+- After about 20 minutes, you will get the following output, which you can access from your browser
 
 ```
 Frontend URL: https://xxxxxxxxx.cloudfront.net
